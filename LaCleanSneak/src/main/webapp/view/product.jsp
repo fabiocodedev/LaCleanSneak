@@ -1,41 +1,33 @@
-<div class="row m-1 container" style="background-color: green">
-	<h1 class="text-center m-5">AJOUT D'UN PRODUIT</h1>
-	<!-- MULTIPART OBLIGATOIRE POUR L'UPLOAD DE FICHIERS IMG/FILES/... -->
-	<form method="post" action="product" enctype="multipart/form-data" >
-		<div class="row justify-content-around">
-			<div class="col-5 mb-3">
-				<label for="title" class="form-label">Titre :</label>
-				<input type="text" class="form-control mb-3" id="title" name="title" required>
-				
-				<label for="description" class="form-label">Description :</label>
-				<textarea class="form-control mb-3" id="description" name="description" required></textarea>
-				<!-- <input type="text" class="form-control mb-3" id="description" name="description"> -->
-				
-				<label for="price" class="form-label">Prix :</label>
-				<div class="input-group">
-					<input type="number" min="0,01" step="0,01" class="form-control mb-3" id="price" name="price" required>
-					<span class="input-group-text mb-3">&euro;</span>
-			    </div>
+<div class="row m-1" style="background-color: green">
+	<c:if test="${empty utilisateur }">
+	<div class="d-flex container align-items-center justify-content-center" style="height: 500px;">
+		<h2 class="">Vous devez vous connecter pour consulter cet article !</h2>
+	</div>	
+	</c:if>
+	<c:if test="${!empty utilisateur }">
+		<div class="container d-flex justify-content-around">
+			<div class="col-4 m-3" style="width: 25rem; height: 20rem;">
+				<img
+					src="<c:out value="assets/img/uploadProduct/${product.productPicPath}"></c:out>"
+					class="card-img-top object-fit-cover h-100" alt="shoes">
 			</div>
-		
-			<div class="col-5 mb-3">
-				<label for="download_img" class="form-label">Photo du produit :</label>
-				<input type="file" id="download_img" class="form-control mb-1" name="productPicPath" accept=".jpg,.png" required>
-
-				<a href="product?add-product=1">
-				<button class="btn btn-primary" type="button">
-						<i class="bi bi-plus-circle"></i>
-				</button>
-				</a>
-				<input type="image" class="form-control mt-3"
-						src="assets/img/image_placeholder.jpg"
-						name="imageUpload"
-						>
+			<div class="col-6 m-3">
+				<div class="">
+					<h3 class="text-center m-3">
+						<c:out value="${product.title}"></c:out>
+					</h3>
+					<p class="m-3">
+						<c:out value="${product.description}"></c:out>
+					</p>
+				</div>
+				<div class="d-flex justify-content-around align-self-end">
+					<h5 class="card-text">
+						<c:out value="${product.price} euros"></c:out>
+					</h5>
+					<a href="card?idProduct=${product.id}" class="btn btn-primary">Ajouter
+						au panier</a>
+				</div>
 			</div>
 		</div>
-		<div class="container d-flex justify-content-center">
-				<button type="submit" class="btn btn-primary mt-3">Submit</button>
-		</div>
-		
-	</form>
+	</c:if>
 </div>

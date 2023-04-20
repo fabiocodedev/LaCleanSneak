@@ -32,7 +32,7 @@ public class Index extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		request.setAttribute("products", new ProductDao().read() );
-		
+
 		request.getRequestDispatcher("view/home.jsp").forward(request, response);
 	}
 	/**

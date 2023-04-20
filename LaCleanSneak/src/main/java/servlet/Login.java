@@ -42,7 +42,7 @@ public class Login extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		UserDao userDao = new UserDao();
-		User user = userDao.login(request.getParameter("email"),request.getParameter("mdp"));
+		User user = userDao.login(request.getParameter("mail"),request.getParameter("password"));
 		
 		if (user != null) {
 			HttpSession session = request.getSession(true);

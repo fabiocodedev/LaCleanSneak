@@ -47,13 +47,11 @@ public class ProductDao implements IDAO<Product>{
 		try {
 			sql= connect.prepareStatement("SELECT * FROM product");
 			rs = sql.executeQuery();
-			
 			while (rs.next()) {
-				Product product = new Product(rs.getString("title"),rs.getString("description"),
+				Product product = new Product(rs.getInt("id"),rs.getString("title"),rs.getString("description"),
 						rs.getInt("price"),rs.getString("productPicPath"));
 				
 				productsList.add(product);
-				
 			}
 			
 		} catch (SQLException e) {
@@ -76,6 +74,7 @@ public class ProductDao implements IDAO<Product>{
 			sql.setString(2, product.getDescription());
 			sql.setInt(3, product.getPrice());
 			sql.setString(4, product.getProductPicPath());
+			sql.setInt(5 , product.getId());
 			
 			sql.execute();
 			
@@ -112,14 +111,17 @@ public class ProductDao implements IDAO<Product>{
 	@Override
 	public Product findById(int id) {
 		
-		Product product = new Product();
+		Product product = null;
 		
 		try {
 			sql = connect.prepareStatement("SELECT * FROM product WHERE id=?");
+			
+			sql.setInt(1 , id);
+			
 			rs = sql.executeQuery();
 			
-			while (rs.next()) {
-				product = new Product(rs.getString("title"),rs.getString("description"),rs.getInt("price"),
+			if (rs.next()) {
+				product = new Product(rs.getInt("id"),rs.getString("title"),rs.getString("description"),rs.getInt("price"),
 						rs.getString("productPicPath"));
 			}
 			

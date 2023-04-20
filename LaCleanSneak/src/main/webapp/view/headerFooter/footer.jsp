@@ -1,124 +1,63 @@
-<!-- Footer -->
-<footer class="text-center text-lg-start bg-white text-muted">
-  <!-- Section: Social media -->
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-    <!-- Left -->
-    <div class="me-5 d-none d-lg-block">
-      <span>Restez connecter avec nous sur nos reseaux sociaux:</span>
-    </div>
-    <!-- Left -->
-
-    <!-- Right -->
-    <div>
-      <a href="" class="me-4 link-secondary">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 link-secondary">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 link-secondary">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 link-secondary">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="" class="me-4 link-secondary">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="" class="me-4 link-secondary">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <!-- Right -->
-  </section>
-  <!-- Section: Social media -->
-
-  <!-- Section: Links  -->
-  <section class="">
-    <div class="container text-center text-md-start mt-5">
-      <!-- Grid row -->
-      <div class="row mt-3">
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <!-- Content -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3 text-secondary"></i>Company name
-          </h6>
-          <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Products
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Angular</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">React</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Vue</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Laravel</a>
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Useful links
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Pricing</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Settings</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Orders</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Help</a>
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-          <p><i class="fas fa-home me-3 text-secondary"></i> New York, NY 10012, US</p>
-          <p>
-            <i class="fas fa-envelope me-3 text-secondary"></i>
-            info@example.com
-          </p>
-          <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
-          <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
-        </div>
-        <!-- Grid column -->
-      </div>
-      <!-- Grid row -->
-    </div>
-  </section>
-  <!-- Section: Links  -->
-
-  <!-- Copyright -->
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
-    © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-</footer>
-<!-- Footer -->
-</body>
+<footer class="footer text-light bg-dark pt-4 pb-4">
+				<div class="container text-white-50">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-12">
+                            <div class="single-footer f-contact">
+                                <h3>Contactez nous !</h3>
+                                <p class="phone">Téléphone : <a href="tel:0123456789" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">01 23 45 67 89</a></p>
+                                <ul>
+                                    <li><span>Lundi-Vendredi : </span> 09:00 - 20:00</li>
+                                    <li><span>Samedi : </span> 10:00 - 18:00</li>
+                                </ul>
+                                <p class="mail">
+                                    <a href="mailto:contact@lacleansneak.fr" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">contact@lacleansneak.fr</a>
+                                </p>
+                            </div>
+                        </div>
+						<div class="col-lg-3 col-md-6 col-12">
+                            <div class="d-flex flex-column">
+                                <h3>Information</h3>
+                                <ul class="list-unstyled">
+                                    <li><a href="about" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">A propos</a></li>
+                                    <li><a href="cgv" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Conditions Générales de Vente</a></li>
+                                </ul>
+                            </div>
+                        </div>
+						<div class="col-md-6 col-12 text-center">
+							<div>
+								<h3>La Clean'Sneak <em class="fs-6">by SPEAR</em></h3>
+								<p>La Clean'Sneak est une entreprise française de commerce en ligne
+									basée à Paris. Elle est l'un des géants du Web. Créée par le
+									groupe SPEAR en Mars 2022, son siège social est situé rue
+									Politzer à Paris. La Société La Clean'Sneak est spécialisée dans la
+									vente de sneaker avec service et produits derivés.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="container">
+						<div class="inner-content">
+							<div class="row align-middle">
+								<div class="col-lg-4 col-12">
+									<div class="payment-gateway">
+										<span>Partenaire de paiement </span> <i class="bi bi-paypal"></i>
+									</div>
+								</div>
+								<div class="col-lg-4 col-12 text-center">
+									<div class="copyright">
+										<p>
+											&#169; 2023 SPEAR. Tous droits réservés.
+										</p>
+									</div>
+								</div>
+								<div class="col-lg-4 col-12 text-end">
+									Suivez-nous sur : </span><a href="javascript:void(0)" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"><i class="bi bi-facebook"></i></a></li>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+	</body>
 </html>

@@ -69,7 +69,7 @@ public class UserDao implements IDAO<User> {
 			rs = sql.executeQuery();
 			
 			while(rs.next()) {
-				User user = new User(rs.getString("firstName"),rs.getString("lastName"),rs.getString("address"),
+				User user = new User(rs.getInt("id"),rs.getString("firstName"),rs.getString("lastName"),rs.getString("address"),
 							rs.getString("phone"),rs.getString("mail"),rs.getString("password")
 							,rs.getString("userPicPath"));
 				
@@ -138,10 +138,12 @@ public class UserDao implements IDAO<User> {
 		try {
 			sql = connect.prepareStatement("SELECT * FROM user WHERE id=?");
 			
+			sql.setInt(1, user.getId());
+			
 			rs = sql.executeQuery();
 			
 			while(rs.next()) {
-				user = new User(rs.getString("firstName"),rs.getString("lastName"),rs.getString("address"),
+				user = new User(rs.getInt("id"),rs.getString("firstName"),rs.getString("lastName"),rs.getString("address"),
 							rs.getString("phone"),rs.getString("mail"),rs.getString("password"),rs.getString("userPicPath"));
 				
 			}

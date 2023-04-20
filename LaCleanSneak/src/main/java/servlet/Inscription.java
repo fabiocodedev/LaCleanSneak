@@ -41,7 +41,6 @@ public class Inscription extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println(request.getParameter("adresse"));
 		
 		// TODO Auto-generated method stub
 		
@@ -59,6 +58,7 @@ public class Inscription extends HttpServlet {
 		
 		
 //		        CRYPTAGE DU MDP AVEC BCRYPT ----------------------------------
+		System.out.println(request.getParameter("userPicPath"));
 		
 				String mdpCrypt = BCrypt.hashpw(request.getParameter("password"), BCrypt.gensalt());
 				
